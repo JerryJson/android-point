@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addItem"
+        android:text="add" />
+
+    <RelativeLayout
+        android:layout_below="@+id/add_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/id_listview"
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+        <include
+            android:id="@+id/id_float_view"
+            layout="@layout/item"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textColor="@color/material_blue_grey_950"
+            android:id="@+id/textView"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <com.muhe.kindy.floatlistview.SlidebarView
+        android:layout_width="22dp"
+        android:id="@+id/slidebarView"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>
